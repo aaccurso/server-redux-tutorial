@@ -1,7 +1,7 @@
 import {List, Map} from 'immutable';
 
-export function setEntries (currentState, entries) {
-  return currentState.set('entries', List(entries));
+export function setEntries (state, entries) {
+  return state.set('entries', List(entries));
 }
 
 export function next(state) {
@@ -12,4 +12,12 @@ export function next(state) {
     }),
     entries: entries.skip(2)
   });
+}
+
+export function vote(state, entry) {
+  return state.updateIn(
+    ['vote', 'tally', entry],
+    0, // notSetValue
+    tally => tally + 1
+  );
 }
