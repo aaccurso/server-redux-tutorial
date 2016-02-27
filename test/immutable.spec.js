@@ -18,4 +18,20 @@ describe('immutability', () => {
 
   });
 
+  describe('a list', () => {
+
+    function addMovie(currentState, movie) {
+      return [...currentState, movie];
+    }
+
+    it('is immutable', () => {
+      let state = ['Trainspotting', '28 Days Later'];
+      let nextState = addMovie(state, 'Sunshine');
+
+      expect(nextState.length).to.equal(3);
+      expect(state.length).to.equal(2);
+    });
+
+  });
+
 });
