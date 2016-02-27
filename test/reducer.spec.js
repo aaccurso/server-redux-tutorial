@@ -5,6 +5,15 @@ import {reducer, actions} from '../src/reducer';
 
 describe('reducer', () => {
 
+  it('has an initial state', () => {
+    const action = {type: actions.SET_ENTRIES, entries: ['Trainspotting']};
+    const nextState = reducer(undefined, action);
+
+    expect(nextState).to.equal(fromJS({
+      entries: ['Trainspotting']
+    }));
+  });
+
   it('handles SET_ENTRIES', () => {
     const initialState = Map();
     const action = {type: actions.SET_ENTRIES, entries: ['Trainspotting']};
