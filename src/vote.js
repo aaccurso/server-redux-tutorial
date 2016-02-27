@@ -17,6 +17,11 @@ const getWinners = (vote) => {
 export function next(state) {
   const entries = state.get('entries')
     .concat(getWinners(state.get('vote')));
+  if (entries.size === 1) {
+    return Map({
+      winner: entries.first()
+    });
+  }
   return state.merge({
     vote: Map({
       pair: entries.take(2)
