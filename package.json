@@ -1,7 +1,7 @@
 {
-  "name": "full-stack-redux-tutorial",
+  "name": "server-redux-tutorial",
   "version": "1.0.0",
-  "description": "Based on http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html",
+  "description": "Based on http://teropa.info/blog/2015/09/10/server-redux-tutorial.html",
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaccurso/full-stack-redux-tutorial.git"
+    "url": "git+https://github.com/aaccurso/server-redux-tutorial.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aaccurso/full-stack-redux-tutorial/issues"
+    "url": "https://github.com/aaccurso/server-redux-tutorial/issues"
   },
-  "homepage": "https://github.com/aaccurso/full-stack-redux-tutorial#readme",
+  "homepage": "https://github.com/aaccurso/server-redux-tutorial#readme",
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",
