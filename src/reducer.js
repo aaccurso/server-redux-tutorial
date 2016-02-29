@@ -1,18 +1,13 @@
 import {setEntries, next, vote, INITIAL_STATE} from './vote';
+import actionTypes from './actionTypes';
 
-export const actions = {
-  SET_ENTRIES: 'SET_ENTRIES',
-  NEXT: 'NEXT',
-  VOTE: 'VOTE'
-}
-
-export function reducer(state = INITIAL_STATE, action) {
+export default function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-  case actions.SET_ENTRIES:
+  case actionTypes.SET_ENTRIES:
     return setEntries(state, action.entries);
-  case actions.NEXT:
+  case actionTypes.NEXT:
     return next(state);
-  case actions.VOTE:
+  case actionTypes.VOTE:
     return state.update('vote', voteState => vote(voteState, action.entry));
   }
   return state;
