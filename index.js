@@ -1,14 +1,14 @@
 import makeStore from './src/store';
 import startServer from './src/server';
-import {actions} from './src/reducer';
+import actionTypes from './src/actionTypes';
 
 export const store = makeStore();
 startServer(store);
 
 store.dispatch({
-  type: actions.SET_ENTRIES,
+  type: actionTypes.SET_ENTRIES,
   entries: require('./entries.json')
 });
 store.dispatch({
-  type: actions.NEXT
+  type: actionTypes.NEXT
 });
